@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>RegExp正则表达式 | 汤铮的BLOG</title>
+  <title>webpack填坑第一弹 | 汤铮的BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="RegExp正则表达式">
-<meta property="og:url" content="http://yoursite.com/2017/03/09/RegExp正则表达式/index.html">
+  <meta name="description" content="webpack是用来干什么？webpack是一个现代JavaScript应用模块打包工具。把你的所有依赖递归打包到一小撮bundles（通常是一个），让浏览器可以加载。重点掌握四大核心概念：Entry,Output,Loaders,Plugins">
+<meta name="keywords" content="webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack填坑第一弹">
+<meta property="og:url" content="http://yoursite.com/2017/06/24/webpack填坑第一弹/index.html">
 <meta property="og:site_name" content="汤铮的BLOG">
-<meta property="og:updated_time" content="2017-03-09T14:18:26.427Z">
+<meta property="og:description" content="webpack是用来干什么？webpack是一个现代JavaScript应用模块打包工具。把你的所有依赖递归打包到一小撮bundles（通常是一个），让浏览器可以加载。重点掌握四大核心概念：Entry,Output,Loaders,Plugins">
+<meta property="og:updated_time" content="2017-06-24T13:57:55.983Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RegExp正则表达式">
+<meta name="twitter:title" content="webpack填坑第一弹">
+<meta name="twitter:description" content="webpack是用来干什么？webpack是一个现代JavaScript应用模块打包工具。把你的所有依赖递归打包到一小撮bundles（通常是一个），让浏览器可以加载。重点掌握四大核心概念：Entry,Output,Loaders,Plugins">
   
     <link rel="alternative" href="/atom.xml" title="汤铮的BLOG" type="application/atom+xml">
   
@@ -154,27 +158,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-RegExp正则表达式" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-webpack填坑第一弹" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      RegExp正则表达式
+      webpack填坑第一弹
     </h1>
   
 
         
-        <a href="/2017/03/09/RegExp正则表达式/" class="archive-article-date">
-  	<time datetime="2017-03-09T14:18:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-09</time>
+        <a href="/2017/06/24/webpack填坑第一弹/" class="archive-article-date">
+  	<time datetime="2017-06-24T13:12:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="webpack是用来干什么？"><a href="#webpack是用来干什么？" class="headerlink" title="webpack是用来干什么？"></a>webpack是用来干什么？</h1><p>webpack是一个现代JavaScript应用模块打包工具。把你的所有依赖递归打包到一小撮bundles（通常是一个），让浏览器可以加载。<br>重点掌握四大核心概念：Entry,Output,Loaders,Plugins<br><a id="more"></a></p>
+<h2 id="Entry"><a href="#Entry" class="headerlink" title="Entry"></a>Entry</h2><p>顾名思义，入口文件。webpack打包的起点，告诉webpack从哪里开始干</p>
+<h3 id="单入口文件"><a href="#单入口文件" class="headerlink" title="单入口文件"></a>单入口文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">  entry: &apos;./path/to/my/entry/file.js&apos;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="对象语法"><a href="#对象语法" class="headerlink" title="对象语法"></a>对象语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">const config = &#123;</div><div class="line">  entry: &#123;</div><div class="line">    app: &apos;./src/app.js&apos;,</div><div class="line">    vendors: &apos;./src/vendors.js&apos;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="多页面应用"><a href="#多页面应用" class="headerlink" title="多页面应用"></a>多页面应用</h3><p>当每个页面有不同的依赖图时<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">const config = &#123;</div><div class="line">  entry: &#123;</div><div class="line">    pageOne: &apos;./src/pageOne/index.js&apos;,</div><div class="line">    pageTwo: &apos;./src/pageTwo/index.js&apos;,</div><div class="line">    pageThree: &apos;./src/pageThree/index.js&apos;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>输出文件，告诉webpack把打包好的东西用什么标签（filename文件名）放在哪里（path）用什么方法编译（output options）</p>
+<h3 id="单入口"><a href="#单入口" class="headerlink" title="单入口"></a>单入口</h3><p>最少要一个文件名和一个路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  entry: &apos;./src/app.js&apos;,</div><div class="line">  output: &#123;</div><div class="line">    filename: &apos;bundle.js&apos;,</div><div class="line">    path: __dirname + &apos;/build&apos;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="多入口"><a href="#多入口" class="headerlink" title="多入口"></a>多入口</h3><p>[name]<br>[hash]<br>[chunkhash]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  entry: &#123;</div><div class="line">    app: &apos;./src/app.js&apos;,</div><div class="line">    search: &apos;./src/search.js&apos;</div><div class="line">  &#125;,</div><div class="line">  output: &#123;</div><div class="line">    filename: &apos;[name].js&apos;,</div><div class="line">    path: __dirname + &apos;/build&apos;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="常用的操作options"><a href="#常用的操作options" class="headerlink" title="常用的操作options"></a>常用的操作options</h3><h2 id="Loaders"><a href="#Loaders" class="headerlink" title="Loaders"></a>Loaders</h2><p>把浏览器不认识的变成浏览器认识的加工工具统一在这里进行分配</p>
+<h3 id="For-example"><a href="#For-example" class="headerlink" title="For example"></a>For example</h3><p>如果你要webpack加载一个css文件或者把typescript转成JavaScript,都是由Loaders把各个文件分配给各个单位（loader）去执行</p>
+<p>1.安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev css-loader</div><div class="line">npm install --save-dev ts-loader</div></pre></td></tr></table></figure></p>
+<p>2.设置webpack.config.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">  module: &#123;</div><div class="line">    rules: [</div><div class="line">      &#123;test: /\.css$/, use: &apos;css-loader&apos;&#125;,</div><div class="line">      &#123;test: /\.ts$/, use: &apos;ts-loader&apos;&#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p>Plugins是webpack的脊梁？？？问号脸？？？Plugins操作用来自定义webpack的编译流程,需要用一些插件来进行处理时<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">var webpack = require(&apos;webpack&apos;)</div><div class="line">// importing plugins that do not come by default in webpack</div><div class="line">var ExtractTextPlugin = require(&apos;extract-text-webpack-plugin&apos;);</div><div class="line">var DashboardPlugin = require(&apos;webpack-dashboard/plugin&apos;);</div><div class="line"></div><div class="line">// adding plugins to your configuration</div><div class="line">plugins: [</div><div class="line">  // build optimization plugins</div><div class="line">  new webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">    name: &apos;vendor&apos;,</div><div class="line">    filename: &apos;vendor-[hash].min.js&apos;,</div><div class="line">  &#125;),</div><div class="line">  new webpack.optimize.UglifyJsPlugin(&#123;</div><div class="line">    compress: &#123;</div><div class="line">      warnings: false,</div><div class="line">      drop_console: false,</div><div class="line">    &#125;</div><div class="line">  &#125;),</div><div class="line">  new ExtractTextPlugin(&#123;</div><div class="line">    filename: &apos;build.min.css&apos;,</div><div class="line">    allChunks: true,</div><div class="line">  &#125;),</div><div class="line">  new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),</div><div class="line">  // compile time plugins</div><div class="line">  new webpack.DefinePlugin(&#123;</div><div class="line">    &apos;process.env.NODE_ENV&apos;: &apos;&quot;production&quot;&apos;,</div><div class="line">  &#125;),</div><div class="line">  // webpack-dev-server enhancement plugins</div><div class="line">  new DashboardPlugin(),</div><div class="line">  new webpack.HotModuleReplacementPlugin(),</div><div class="line">]</div></pre></td></tr></table></figure></p>
+
       
 
       
@@ -203,6 +220,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -253,7 +281,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/09/RegExp正则表达式/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/24/webpack填坑第一弹/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -267,18 +295,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/10/正则表达式实战/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          正则表达式实战
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/09/javascript中的闭包问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">javascript中的闭包问题</div>
+    <a href="/2017/06/23/VUE的webpack-simple模板/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">VUE的webpack-simple模板</div>
       <i class="icon-circle-right"></i>
     </a>
   
