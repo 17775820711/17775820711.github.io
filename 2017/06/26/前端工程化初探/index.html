@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>表单脚本 | 汤铮的BLOG</title>
+  <title>前端工程化 | 汤铮的BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="表单基础知识表单独有的属性和方法获取表单的方式1.看成其他元素一样getElementById()">
+  <meta name="description" content="0.交代背景有这样一个项目，具体要求如下，请进行技术选型 开发 组件化开发。整个webapp由各个组件构成，一个组件的Js、CSS和HTML维护在一起，尽量松耦合。 模块化开发。Js模块化，CSS模块化，HTML模块化，所有资源都是模块，并采取就近引入原则，哪里用哪里引，同时要做到防止资源重复引入。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="表单脚本">
-<meta property="og:url" content="http://yoursite.com/2017/03/15/表单脚本/index.html">
+<meta property="og:title" content="前端工程化">
+<meta property="og:url" content="http://yoursite.com/2017/06/26/前端工程化初探/index.html">
 <meta property="og:site_name" content="汤铮的BLOG">
-<meta property="og:description" content="表单基础知识表单独有的属性和方法获取表单的方式1.看成其他元素一样getElementById()">
-<meta property="og:updated_time" content="2017-03-15T05:22:21.204Z">
+<meta property="og:description" content="0.交代背景有这样一个项目，具体要求如下，请进行技术选型 开发 组件化开发。整个webapp由各个组件构成，一个组件的Js、CSS和HTML维护在一起，尽量松耦合。 模块化开发。Js模块化，CSS模块化，HTML模块化，所有资源都是模块，并采取就近引入原则，哪里用哪里引，同时要做到防止资源重复引入。">
+<meta property="og:image" content="http://chenzhutian.org/blog/2016/%E6%B5%85%E8%B0%88VisMooc%E7%9A%84%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/components1.png">
+<meta property="og:image" content="http://chenzhutian.org/blog/2016/%E6%B5%85%E8%B0%88VisMooc%E7%9A%84%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/components2.png">
+<meta property="og:image" content="http://chenzhutian.org/blog/2016/%E6%B5%85%E8%B0%88VisMooc%E7%9A%84%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/vuejs-component.png">
+<meta property="og:updated_time" content="2017-06-26T13:53:54.671Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="表单脚本">
-<meta name="twitter:description" content="表单基础知识表单独有的属性和方法获取表单的方式1.看成其他元素一样getElementById()">
+<meta name="twitter:title" content="前端工程化">
+<meta name="twitter:description" content="0.交代背景有这样一个项目，具体要求如下，请进行技术选型 开发 组件化开发。整个webapp由各个组件构成，一个组件的Js、CSS和HTML维护在一起，尽量松耦合。 模块化开发。Js模块化，CSS模块化，HTML模块化，所有资源都是模块，并采取就近引入原则，哪里用哪里引，同时要做到防止资源重复引入。">
+<meta name="twitter:image" content="http://chenzhutian.org/blog/2016/%E6%B5%85%E8%B0%88VisMooc%E7%9A%84%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/components1.png">
   
     <link rel="alternative" href="/atom.xml" title="汤铮的BLOG" type="application/atom+xml">
   
@@ -157,35 +161,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-表单脚本" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-前端工程化初探" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      表单脚本
+      前端工程化
     </h1>
   
 
         
-        <a href="/2017/03/15/表单脚本/" class="archive-article-date">
-  	<time datetime="2017-03-15T02:45:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
+        <a href="/2017/06/26/前端工程化初探/" class="archive-article-date">
+  	<time datetime="2017-06-26T00:00:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="表单基础知识"><a href="#表单基础知识" class="headerlink" title="表单基础知识"></a>表单基础知识</h2><h3 id="表单独有的属性和方法"><a href="#表单独有的属性和方法" class="headerlink" title="表单独有的属性和方法"></a>表单独有的属性和方法</h3><h3 id="获取表单的方式"><a href="#获取表单的方式" class="headerlink" title="获取表单的方式"></a>获取表单的方式</h3><p>1.看成其他元素一样getElementById()<br><a id="more"></a><br>2.document.forms 通过数值索引或name来获取<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var firstForm = document.forms[0];  //获取页面第一个表单</div><div class="line">var myForm = document.forms[&apos;form2&apos;] //获取页面中name=form2的表单</div></pre></td></tr></table></figure></p>
-<h3 id="提交表单"><a href="#提交表单" class="headerlink" title="提交表单"></a>提交表单</h3><p>通过<code>&lt;input&gt;</code> <code>&lt;button&gt;</code> 都可以定义提交按钮，type属性为submit即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;submit&quot; value=&quot;Submit Form&quot;&gt;</div><div class="line">&lt;button type=&quot;submit&quot;&gt;Submit Form&lt;button&gt;</div><div class="line">&lt;input type=&quot;image&quot; src=&quot;graphic.gif&quot;&gt;</div></pre></td></tr></table></figure></p>
-<p>相应表单控件拥有焦点时，按回车就会提交表单（textarea例外，换行）<br>使用<code>submit()</code>不用出发submit事件也能提交表单<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var form = document.getElemetById(&apos;myForm&apos;);</div><div class="line"></div><div class="line">//提交表单</div><div class="line">form.submit();</div></pre></td></tr></table></figure></p>
-<p>解决重复提交问题<br>1.提交表单后禁用提交按钮<br>2.利用onsubmit事件处理程序取消后续表单提交操作</p>
-<h3 id="重置表单"><a href="#重置表单" class="headerlink" title="重置表单"></a>重置表单</h3><p>1.type为reset的 <code>&lt;input&gt;</code> <code>&lt;button&gt;</code>都可以<br>2.form.reset();</p>
-<h3 id="表单字段"><a href="#表单字段" class="headerlink" title="表单字段"></a>表单字段</h3><p>和DOM一样，表单也有elements属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var form = document.getElementById(&apos;&apos;);</div><div class="line"></div><div class="line">//通过索引</div><div class="line">var field1 = form.elements[0];</div><div class="line"></div><div class="line">//通过name</div><div class="line">var field2 = form.elements[&apos;textbox&apos;];</div><div class="line"></div><div class="line">//获取字段数量</div><div class="line">var fieldCount = form.elements.length</div></pre></td></tr></table></figure></p>
-<h2 id="文本框脚本"><a href="#文本框脚本" class="headerlink" title="文本框脚本"></a>文本框脚本</h2><p>input和textarea两种形式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//单行文本 显示25字符 最多50字符 初始值为initial value</div><div class="line">&lt;input type=&quot;text&quot; size=&quot;25&quot; maxlength=&quot;50&quot; value=&quot;initial value&quot;&gt;</div><div class="line"></div><div class="line">//</div><div class="line">&lt;textarea rows=&quot;25&quot; cols=&quot;5&quot;&gt;initial value&lt;/textarea&gt;</div></pre></td></tr></table></figure></p>
-<h3 id="选择文本-select"><a href="#选择文本-select" class="headerlink" title="选择文本 select()"></a>选择文本 select()</h3><p>select()方法 与 select事件</p>
-<h3 id="过滤输入"><a href="#过滤输入" class="headerlink" title="过滤输入"></a>过滤输入</h3>
+        <h1 id="0-交代背景"><a href="#0-交代背景" class="headerlink" title="0.交代背景"></a>0.交代背景</h1><p>有这样一个项目，具体要求如下，请进行技术选型</p>
+<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><ol>
+<li>组件化开发。整个webapp由各个组件构成，一个组件的Js、CSS和HTML维护在一起，尽量松耦合。</li>
+<li>模块化开发。Js模块化，CSS模块化，HTML模块化，所有资源都是模块，并采取就近引入原则，哪里用哪里引，同时要做到防止资源重复引入。<a id="more"></a></li>
+<li>文件实时监听、浏览器自动刷新。</li>
+<li>依赖包管理，版本控制。</li>
+<li>规范编码。编码规范的事可以参考《编写可维护的JavaScript》，主要靠自觉。<h2 id="构建"><a href="#构建" class="headerlink" title="构建"></a>构建</h2></li>
+<li>可以编译中间语言。比如支持Stylus、Less、Typescript等的编译。</li>
+<li>支持Js、CSS的压缩和混肴。</li>
+<li>允许图片压缩后以base64编码形式嵌入到CSS、Js或HTML中。</li>
+<li>支持代码按需加载。将代码根据页面需求进行分割与合并，优化Http请求数。<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2></li>
+<li>根据代码内容生成版本号，实现缓存控制，提示访问性能。</li>
+<li>支持第三方类库的Js、CSS与自己所写的代码分离。</li>
+</ol>
+<h2 id="前端渲染"><a href="#前端渲染" class="headerlink" title="前端渲染"></a>前端渲染</h2><p>当然是VUE啦，你问我为什么？Angularh和react我学不会啊！</p>
+<h2 id="构建打包"><a href="#构建打包" class="headerlink" title="构建打包"></a>构建打包</h2><p>选了VUE 不选webpack？</p>
+<h2 id="依赖包管理"><a href="#依赖包管理" class="headerlink" title="依赖包管理"></a>依赖包管理</h2><p>还有比npm做得更好的？</p>
+<h1 id="2-项目目录设计"><a href="#2-项目目录设计" class="headerlink" title="2.项目目录设计"></a>2.项目目录设计</h1><p>传统前端怎么玩？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">project</div><div class="line">	|-src</div><div class="line">		|-HTML</div><div class="line">		|-CSS</div><div class="line">		|-JS</div><div class="line">		|-Images</div></pre></td></tr></table></figure></p>
+<p>这样简单粗暴的目录结构，维护起来可不容易。</p>
+<blockquote>
+<ul>
+<li>如果项目中一个功能有问题，要找js，css甚至图片，哎麻烦</li>
+<li>CSS下的文件不知道哪些图片在用哪些废弃了</li>
+<li>多人合作，很多人改一个文件，造成冲突</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">project</div><div class="line">	|-node_modules</div><div class="line">	|-src</div><div class="line">		|-Components //存放组件资源</div><div class="line">		|-Filter  // 存放自己实现的filter</div><div class="line">		|-Directives //存放自己实现的directives</div><div class="line">		|-Static //存放非组件资源</div><div class="line">		|-lib //存放不在npm上的资源</div></pre></td></tr></table></figure>
+<h1 id="3-愉快的写码"><a href="#3-愉快的写码" class="headerlink" title="3.愉快的写码"></a>3.愉快的写码</h1><p>终于开始写代码了，首先组件化。</p>
+<p><img src="http://chenzhutian.org/blog/2016/%E6%B5%85%E8%B0%88VisMooc%E7%9A%84%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/components1.png" alt=""></p>
+<p>所谓组件化</p>
+<blockquote>
+<ul>
+<li>页面每个独立的可视/可交互区域为一个组件；</li>
+<li>每个组件对应一个工程目录，各个组件资源就近维护</li>
+<li>每个组件相对独立，页面只不过是组件的容器，组件自由组合形成功能完整的界面；</li>
+<li>当不需要某个组件，可以全部删掉。</li>
+</ul>
+</blockquote>
+<p>这样就可以把任务划分成合适的粒度，分配给不同的开发者</p>
+<p><img src="http://chenzhutian.org/blog/2016/%E6%B5%85%E8%B0%88VisMooc%E7%9A%84%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/components2.png" alt=""></p>
+<p>令人愉快的是，Vuejs的作者提供了一个插件vue-loader，可以将Vuejs的代码整合进Webpage的构建系统中，从而漂亮的实现了组件化开发的需求。通过使用Vuejs+Webpack这样的组合，我们可以把每一个组件的样式、模板和脚本集合成一个文件里。 一个组件就是一个文件，麻雀虽小五脏俱全，里面包含了组件之间的依赖关系，整个组件从外观到结构到特性再到依赖关系都一览无余。</p>
+<p><img src="http://chenzhutian.org/blog/2016/%E6%B5%85%E8%B0%88VisMooc%E7%9A%84%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/vuejs-component.png" alt=""></p>
+<h1 id="4-潇洒的构建与部署"><a href="#4-潇洒的构建与部署" class="headerlink" title="4.潇洒的构建与部署"></a>4.潇洒的构建与部署</h1><p>到这里，剩下的构建和部署就靠webpack了，配置webpack的配置文件就可以搞定一切。</p>
+<p>一些常规任务，如文件实时监听、浏览器自动刷新（热重载），可以用webpack-dev-server解决，JS、CSS、图片压缩任务就交给webpack自带的优化插件吧<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	//webpack.config.js</div><div class="line">	...</div><div class="line"></div><div class="line">	plugins: &#123;</div><div class="line">		new webpack.optimzie.UglifyJsPlugin(),</div><div class="line">		new webpack.optimzie.OccurenceOrderPlugin(),</div><div class="line">		new webpack.optimzie.DedupePlugin()</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
       
 
       
@@ -264,7 +304,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/15/表单脚本/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/26/前端工程化初探/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,18 +318,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/06/22/RESTful/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          RESTful
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/10/正则表达式实战/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">正则表达式实战</div>
+    <a href="/2017/06/25/VUE踩坑之单文件组件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">VUE踩坑之单文件组件</div>
       <i class="icon-circle-right"></i>
     </a>
   
